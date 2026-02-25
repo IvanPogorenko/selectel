@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../../common/styles/colors" as colors;
 @use "../../common/styles/layout-mixins" as layout-mixins;
 @use "../../common/styles/typography" as typography;
@@ -15,20 +16,20 @@
   }
 
   &__tittle{
-    font-size: map-get(typography.$font-sizes, l);
-    line-height: map-get(typography.$line-height, l);
+    font-size: map.get(typography.$font-sizes, l);
+    line-height: map.get(typography.$line-height, l);
   }
 
   &__signature{
-    font-size: map-get(typography.$font-sizes, m);
-    line-height: map-get(typography.$line-height, m);
+    font-size: map.get(typography.$font-sizes, m);
+    line-height: map.get(typography.$line-height, m);
     margin-top: 5px;
   }
 
   &__btn{
     margin-top: 25px;
     padding: 15px 35px;
-    font-size: map-get(typography.$font-sizes, l);
+    font-size: map.get(typography.$font-sizes, l);
     background: colors.$primary-color;
     color: colors.$white;
     transition: 0.2s ease;

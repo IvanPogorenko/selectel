@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../../common/styles/colors" as colors;
 @use "../../common/styles/layout-mixins" as layout-mixins;
 @use "../../common/styles/typography" as typography;
@@ -14,20 +15,20 @@
   }
 
   &__code {
-    font-size: map-get(typography.$font-sizes, l);
-    line-height: map-get(typography.$line-height, l);
+    font-size: map.get(typography.$font-sizes, l);
+    line-height: map.get(typography.$line-height, l);
     font-weight: 700;
     color: colors.$primary-color;
   }
 
   &__title {
-    font-size: map-get(typography.$font-sizes, l);
-    line-height: map-get(typography.$line-height, l);
+    font-size: map.get(typography.$font-sizes, l);
+    line-height: map.get(typography.$line-height, l);
     font-weight: 600;
   }
 
   &__description {
-    font-size: map-get(typography.$font-sizes, m);
+    font-size: map.get(typography.$font-sizes, m);
     text-align: center;
   }
 
@@ -42,7 +43,7 @@
     background-color: colors.$primary-color;
     color: colors.$white;
     text-decoration: none;
-    font-size: map-get(typography.$font-sizes, m);
+    font-size: map.get(typography.$font-sizes, m);
     transition: 0.2s ease;
     cursor: pointer;
 

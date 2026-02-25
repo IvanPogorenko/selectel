@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../../common/styles/colors" as colors;
 @use "../../common/styles/typography" as typography;
 
@@ -26,7 +27,7 @@
 
   &__input-value {
     text-align: left;
-    font-size: map-get(typography.$font-sizes, s);
+    font-size: map.get(typography.$font-sizes, s);
     color: colors.$primary-color;
     font-weight: 600;
   }

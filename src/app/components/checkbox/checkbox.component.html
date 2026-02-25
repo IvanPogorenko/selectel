@@ -1,11 +1,11 @@
 <label class="checkbox">
-  <input type="checkbox" class="checkbox__input"/>
+  <input type="checkbox" class="checkbox__input" (change)="onChange($event)"/>
   <div class="checkbox__input-text">
     <span class="checkbox__input-name">
-      name
+      {{item.name}}
     </span>
     <span class="checkbox__input-value">
-      value
+      Value: {{item.value}}
     </span>
   </div>
 </label>

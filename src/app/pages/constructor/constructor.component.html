@@ -1,28 +1,35 @@
 <div class="constructor">
   <header class="constructor__header">
     <div class="constructor__header-title">
-      Выбранный тип
+      Выбранный тип: {{activeTypeId}}
     </div>
     <div class="constructor__header-summary">
       <div class="constructor__summary-item">
-        Выбрано: <span class="constructor__summary-value">4</span>
+        Выбрано: <span class="constructor__summary-value">{{itemsCount}}</span>
       </div>
       <div class="constructor__summary-item">
-        Сумма: <span class="constructor__summary-value">40</span>
+        Сумма: <span class="constructor__summary-value">{{sum}}</span>
       </div>
     </div>
   </header>
   <div class="constructor__body">
     <aside class="constructor__aside">
-      <div class="constructor__type constructor__type--active">
-        Тип 1
-      </div>
-      <div class="constructor__type">
-        Тип 1
-      </div>
+      <nav class="constructor__nav">
+        @for (type of typesData; track type.id){
+          <a
+            class="constructor__type"
+            [class.constructor__type--active]="activeTypeId === type.id"
+            (click)="loadItems(type.id)"
+          >
+            {{type.name}}
+          </a>
+        }
+      </nav>
     </aside>
     <main class="constructor__content">
-      <app-checkbox/>
+      @for (item of itemsData; track item.id){
+        <app-checkbox [item]="item" (checkboxChanged)="onCheckboxChange($event)"/>
+      }
     </main>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {ROUTING_CFG} from '../../routing/app.paths';
 
@@ -8,7 +8,7 @@ import {ROUTING_CFG} from '../../routing/app.paths';
     RouterLink
   ],
   templateUrl: './error.component.html',
-  styleUrl: './error.component.scss'
+  styleUrl: './error.component.scss',
 })
 export class ErrorComponent {
 
