@@ -1,0 +1,60 @@
+@use "../../common/styles/colors" as colors;
+@use "../../common/styles/layout-mixins" as layout-mixins;
+@use "../../common/styles/typography" as typography;
+
+.error {
+  @include layout-mixins.flex-center-column;
+  min-height: 100vh;
+
+  &__container {
+    @include layout-mixins.flex-center-column;
+    gap: 20px;
+    padding: 40px;
+    max-width: 500px;
+  }
+
+  &__code {
+    font-size: map-get(typography.$font-sizes, l);
+    line-height: map-get(typography.$line-height, l);
+    font-weight: 700;
+    color: colors.$primary-color;
+  }
+
+  &__title {
+    font-size: map-get(typography.$font-sizes, l);
+    line-height: map-get(typography.$line-height, l);
+    font-weight: 600;
+  }
+
+  &__description {
+    font-size: map-get(typography.$font-sizes, m);
+    text-align: center;
+  }
+
+  &__actions {
+    margin-top: 10px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: colors.$primary-color;
+    color: colors.$white;
+    text-decoration: none;
+    font-size: map-get(typography.$font-sizes, m);
+    transition: 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: colors.$primary-color-hover;
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+  }
+
+}

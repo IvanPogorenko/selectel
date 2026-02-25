@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {RoutingService} from '../../routing/routing.service';
 
 @Component({
   selector: 'app-main',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
+
+  constructor(
+    private _routingService: RoutingService,
+  ) { }
+
+  public navigateToConstructor(){
+    this._routingService.navigateToConstructor();
+  }
 
 }

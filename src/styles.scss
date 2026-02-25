@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@use "app/common/styles/reset";
+@use 'app/common/styles/typography';
+@use 'app/common/styles/colors' as colors;
+
+.btn{
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
