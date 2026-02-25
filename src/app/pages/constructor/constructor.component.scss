@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../../common/styles/colors" as colors;
 @use "../../common/styles/layout-mixins" as layout-mixins;
 @use "../../common/styles/typography" as typography;
@@ -15,8 +16,8 @@
 
   &__header-title {
     text-align: left;
-    font-size: map-get(typography.$font-sizes, l);
-    line-height: map-get(typography.$line-height, l);
+    font-size: map.get(typography.$font-sizes, l);
+    line-height: map.get(typography.$line-height, l);
   }
 
   &__header-summary {
@@ -43,6 +44,10 @@
   &__aside {
     border-right: 2px solid colors.$black;
     padding: 20px;
+  }
+
+  &__nav{
+    @include layout-mixins.flex-center-column;
   }
 
   &__type {

@@ -8,7 +8,7 @@ import {APP_PATHS} from './app.paths';
 export class RoutingService {
 
   constructor(
-    private _router: Router,
+    private readonly _router: Router,
   ) { }
 
   public navigateToMain(){
