@@ -1,0 +1,34 @@
+@use "../../common/styles/colors" as colors;
+@use "../../common/styles/typography" as typography;
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  cursor: pointer;
+
+  &__input {
+    margin-top: 3px;
+    cursor: pointer;
+  }
+
+  &__input-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__input-name {
+    text-align: left;
+    font-weight: 500;
+  }
+
+  &__input-value {
+    text-align: left;
+    font-size: map-get(typography.$font-sizes, s);
+    color: colors.$primary-color;
+    font-weight: 600;
+  }
+
+}

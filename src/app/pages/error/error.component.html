@@ -1,1 +1,12 @@
-<p>error works!</p>
+<main class="error" role="main">
+  <section class="error__container">
+    <h1 class="error__code">404</h1>
+    <h2 class="error__title">Страница не найдена</h2>
+    <p class="error__description">
+      Возможно, страница была удалена, перемещена или введён неверный адрес.
+    </p>
+    <nav class="error__actions" aria-label="Навигация">
+      <a class="error__link" [routerLink]="ROUTING_CFG.Main">Вернуться на главную</a>
+    </nav>
+  </section>
+</main>

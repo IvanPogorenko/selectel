@@ -1,0 +1,16 @@
+$font-sizes: (
+  s: 0.75rem,    // 12px
+  m: 1rem,   // 16px
+  l: 1.5rem,    // 24px
+);
+
+$line-height: (
+  s: 0.75rem,
+  m: 1rem,
+  l: 1.5rem
+);
+
+html {
+  font-size: 16px;
+  line-height: map-get($line-height, m);
+}
