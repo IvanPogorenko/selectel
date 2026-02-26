@@ -1,6 +1,19 @@
+@use '@angular/material' as mat;
 @use "app/common/styles/reset";
 @use 'app/common/styles/typography';
 @use 'app/common/styles/colors' as colors;
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
 
 .btn{
   border: none;
@@ -8,3 +21,6 @@
   border-radius: 15px;
   cursor: pointer;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

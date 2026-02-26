@@ -4,8 +4,14 @@
 @use "../../common/styles/typography" as typography;
 
 .main-page{
-  background: colors.$secondary-color;
   min-height: 100vh;
+  @include layout-mixins.flex-center-column;
+
+  &__title{
+    font-size: map.get(typography.$font-sizes, l);
+    line-height: map.get(typography.$line-height, l);
+  }
+
 }
 
 .greeting{
@@ -16,8 +22,8 @@
   }
 
   &__tittle{
-    font-size: map.get(typography.$font-sizes, l);
-    line-height: map.get(typography.$line-height, l);
+    font-size: map.get(typography.$font-sizes, xl);
+    line-height: map.get(typography.$line-height, xl);
   }
 
   &__signature{

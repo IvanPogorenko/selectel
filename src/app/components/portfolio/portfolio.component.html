@@ -1,0 +1,67 @@
+<section class="portfolio">
+  <mat-card class="portfolio__card main-card">
+    <div class="portfolio__header">
+      <div class="portfolio__avatar">
+        <img class="portfolio__image" src="/images/avatar.jpg" alt="avatar">
+      </div>
+      <div class="portfolio__info">
+        <h2 class="portfolio__name">Иван Погоренко</h2>
+        <h2 class="portfolio__position">Frontend разработчик (Angular)</h2>
+        <div class="portfolio__contacts">
+          @for (contact of contacts; track contact.name) {
+            <div class="contact">
+              <mat-icon>{{contact.name}}</mat-icon>
+              {{contact.link}}
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </mat-card>
+  <mat-card class="portfolio__card">
+    <h3 class="section-title">Обо мне</h3>
+    <p class="portfolio__text">
+      Магистрант ИТМО по направлению Веб-технологии. Более 2 лет занимаюсь frontend разработкой.
+      Основная специализация — Angular. Создаю масштабируемые, поддерживаемые приложения,
+      используя современные архитектурные подходы и state management (NGXS или NgRx).
+    </p>
+  </mat-card>
+  <mat-card class="portfolio__card">
+    <h3 class="section-title">Навыки</h3>
+    <div class="skills">
+      <mat-chip-set>
+        @for (skill of skills; track $index){
+          <mat-chip class="skill-chip">
+            {{ skill }}
+          </mat-chip>
+        }
+      </mat-chip-set>
+    </div>
+  </mat-card>
+  <mat-card class="portfolio__card">
+    <h3 class="section-title">Проекты</h3>
+    <div class="projects">
+      @for (project of projects; track $index){
+        <mat-card class="project-card">
+          <div class="project-name">
+            {{ project.name }}
+          </div>
+          <div class="project-description">
+            {{ project.description }}
+          </div>
+          <div class="project-stack">
+            {{ project.stack }}
+          </div>
+          <a
+            mat-button
+            color="primary"
+            [href]="project.link"
+            target="_blank"
+          >
+            Смотреть проект
+          </a>
+        </mat-card>
+      }
+    </div>
+  </mat-card>
+</section>
